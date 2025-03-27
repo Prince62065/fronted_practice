@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <p id="paragaph">This is a paragraph.</p>
+    </div>
+    <button onclick="addElement()">Add Element</button>
+    <button onclick="removeELement()">Remove ELement</button>
+    <script>
+        function addElement(){
+            let newpara = document.createElement("p");
+            let newpar = document.createElement("p");
+            newpara.textContent = "New Paragraph added!!";
+            newpar.textContent="New prepend added!!";
+            document.getElementById("container").appendChild(newpara);
+            document.getElementById("container").prepend(newpar);
+        }
+        function removeELement(){
+            // let para=document.getElementById("paragaph");
+            // if(para){
+            //     document.getElementById("container").removeChild(para);
+            // }
+
+            const container = document.getElementById("container");
+            const paragraphs = container.getElementsByTagName("p");
+
+            if (paragraphs.length > 1) {
+                container.removeChild(paragraphs[paragraphs.length - 1]);
+            } else {
+                alert("No additional paragraphs to remove!");
+            }
+        }
+    </script>
+</body>
+</html>

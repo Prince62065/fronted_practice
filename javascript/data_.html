@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data type of javascript</title>
+</head>
+<body>
+    <h1>Data Type of javascript</h1>
+    <script>
+        // var has global scope and it can re-declared and update the value;
+        // at the time declared ,it will initialized with undefined value;
+        var a=10;
+        // let has block scope and it can't re-declared but can update the value later.
+        let b=20;
+        // const has block scope and it can't re-declared and can't update the value later.
+        const c=80;
+        if(a>5){
+            console.log("Number is greater than 5");
+            var a=20;
+            console.log("The value of a is "+a);
+            let b=10;
+            console.log("The value of b is "+b);
+            console.log("The value of c is "+c);
+        }
+        else{
+            console.log("Number is not greater than 5");
+        }
+        console.log("The value of a is "+a);
+        console.log("The value of b is "+b);
+    </script>
+</body>
+</html>

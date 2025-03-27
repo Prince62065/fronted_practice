@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval and setTimeout</title>
+    <style>
+        .container{
+            margin: 15px;
+            padding: 15px;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        .childContainer{
+            margin: 15px;
+            padding: 15px;
+            background-color: rgb(227, 70, 35);
+            border: 2px solid black;
+        }
+        .chd{
+            margin: 15px;
+            padding: 15px;
+            background-color: rgb(157, 27, 83);
+            border: 2px solid rgb(227, 181, 29);
+            cursor: pointer;
+        }
+        .footer{
+            margin: 15px;
+            padding: 15px;
+            background-color: rgb(157, 27, 83);
+            border: 2px solid rgb(227, 181, 29);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="childContainer">
+            <div class="chd">
+                This is a child class.
+            </div>
+        </section>
+    </div>
+    <div class="footer">
+
+    </div>
+    <!-- setInterval() will perform repeatively action -->
+     <script>
+     function setRandomColor(){
+        let val1=Math.ceil(0+Math.random()*255);
+        let val2=Math.ceil(0+Math.random()*255);
+        let val3=Math.ceil(0+Math.random()*255);
+        return `rgb(${val1},${val2},${val3})`;
+     }
+     setInterval(()=>{
+        document.querySelector(".chd").style.background=setRandomColor();
+     },1000);
+
+
+    //  setTimeout will perform some action only once
+    setTimeout(()=>{
+        document.querySelector(".footer").textContent="Welcome back";
+    },2000);
+    </script>
+</body>
+</html>

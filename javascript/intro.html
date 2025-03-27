@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Javascript</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <script>
+        console.log("Hello World");
+        alert("Hi");
+        let num=prompt("Enter your number that should be greater than 5");
+        if(num>5){
+            let con=confirm("You want to continue");
+            if(con){
+                console.log("Your number is greater than 5");
+            }
+            else{
+                console.log("Your number is greater than 5 but you doesnot want to continue");
+            }
+        }
+        else{
+            console.log("Your number is not greater than 5");
+        }
+        document.title="Basic javascript";
+        document.body.style.backgroundColor="red";
+    </script>
+</body>
+</html>

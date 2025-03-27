@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #message{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p id="message">Hello World , this is original text.</p>
+    <button onclick="changeText()">Click Me</button>-->
+    <p class="item">First Item</p>
+    <p class="item">Second Item</p> 
+    <!-- <p>This is the first paragraph</p> -->
+     <button onclick="changeText()">Click Me</button>
+    <script>
+        function changeText(){
+            // let chtext=document.getElementById("message");
+            // // chtext.innerText="Hi,Text changes successfully!! ";
+            // chtext.innerHTML="<h1>Hi,Text changes successfully!!</h1>"
+            // chtext.style.color="red";
+
+        // getElementByClassName -> select elements
+        //  let items=document.getElementsByClassName("item");
+        //  items[0].style.color="red";
+        //  items[1].style.color="purple";
+
+        // getELementByTagName
+        // let paragraph=document.getElementsByTagName("p");
+        // paragraph[0].textContent="Changed First paragraph";
+
+        // querySelector
+        // let firstItem=document.querySelector(".item");
+        // firstItem.style.backgroundColor="yellow";
+
+        // querySelectorAll()
+        let item1=document.querySelectorAll(".item");
+        item1.forEach(item=>{
+            item.style.border="2px solid blue";
+        })
+         
+        }
+
+       
+        
+    </script>
+</body>
+</html>
+
+
+
+<!-- 
+getElementById() => single element   
+getElementsByTagName => multiple element to HTML collection
+querySelector()=> single elements
+querySelectorAll()=>Nodelist 
+-->

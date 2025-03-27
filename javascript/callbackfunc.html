@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        console.log("Hello world");
+        console.log("hi");
+        //callback function
+        const callback=(args)=>{
+            console.log(args);
+        }
+
+        function loadscript(src,callback){
+            let sc=document.createElement("script");
+            sc.src=src;
+            sc.onload=callback("Hello callback function");
+        }
+
+        loadscript("www.google.com",callback);
+
+        setTimeout(()=>{
+            console.log("Timeout function is async function that why it will execute later ");
+        },0)
+        console.log("After callback function")
+    </script>
+</body>
+</html>

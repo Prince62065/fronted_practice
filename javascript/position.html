@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        
+        .box{
+            border: 2px solid blue;
+            height: 10vh;
+            width: 65vw;
+            padding: 25px; 
+        }
+        .box1{
+            background-color: blueviolet;
+            /* position:absolute; */
+            position:sticky;
+            top: 0px;
+            width: 70vw;
+            padding: 0px;
+            margin: 0px;
+        }
+        .box2{
+            background-color: aquamarine;
+            /* relative change the position with current position */
+            /* position: relative;
+            bottom:34px ;
+            left: 56px; */
+            
+        }
+        .box3{
+          background-color: brown;
+          /* position: fixed;
+          bottom: 0px;
+          left: 0px; */
+        }
+        .boxp{
+            border: 5px solid black;
+            position:absolute;
+            height:800px;
+            width: 70vw;
+            /* margin: 50px;
+            padding: 50px;  */
+        }
+        /* transform ,filter , or perspective properties */
+    </style>
+  </head>
+  <body>
+    <div class="boxp">
+      <div class="box1 box"></div>
+      <div class="box2 box"></div>
+      <div class="box3 box"></div>
+      <div class="box4 box"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For in loop</title>
+  </head>
+  <body>
+    <h1>For in loop</h1>
+    <script>
+      let obj={
+          name:"Harry",
+          role:"Programmer",
+          company:"CodeWithHarry AI"
+      }
+      for (const key in obj) {
+          // if (Object.prototype.hasOwnProperty.call(object, key)) {
+          //     const element = object[key];
+
+          // }
+          const element = obj[key];
+          console.log(element)
+      }
+
+      const person = {
+        name: "Alice",
+        age: 25,
+        city: "New York",
+      };
+
+      for (const key in person) {
+        console.log(person[key]);
+      }
+
+      for (const element of "Harry") {
+        console.log(element);
+      }
+    </script>
+  </body>
+</html>

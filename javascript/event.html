@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Event</title>
+</head>
+<body>
+    <p class="abc">Hi, Welcome to this page.</p>
+    <input type="submit" value="Clicked it" class="btn">
+
+    <script>
+        let abc=document.querySelector(".btn");
+        abc.addEventListener("click",(e)=>{
+            alert("You have on clicked it button");
+            document.querySelector(".abc").innerHTML="You have click on this page";
+            
+        })
+    </script>
+</body>
+</html>

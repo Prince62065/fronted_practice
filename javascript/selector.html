@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector in javascript</title>
+    <style>
+        .box{
+            height: 50px;
+            width: 50px;
+            border: 2px solid purple;
+            margin: 10px;
+        }
+        .green{
+            background-color: green;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1 box2 green" style="border:5px solid red" data-createdby="Prince">Box1</div>
+        <div class="box " >Box2</div>
+        <div class="box">Box3</div>
+        <div class="box" id="abc">Box4</div>
+        <div class="box">Box5</div>
+    </div>
+    <script>
+        // let box=document.getElementsByClassName("box");
+        // console.log(box);
+        // box[2].style.backgroundColor="red";
+        // document.getElementById("abc").style.backgroundColor="yellow";
+        // it will apply only on first box class
+        // document.querySelector(".box").style.backgroundColor="green";
+        // document.querySelectorAll(".box").forEach(e=>{
+        //     e.style.backgroundColor="blue";
+        // })
+        // let a=document.getElementsByTagName("div");
+        // console.log(a);
+        // // it will verify the matches of css selector
+        // console.log(a[4].matches("#abc"));
+        // // if it closest to css selector then return element otherwise it will return null values;
+        // console.log(a[5].closest("#abc"));
+        // it is used to access inner html
+        // let inner=document.querySelector(".container").innerHTML;
+        
+        // it is used to access outer element of html
+        // let inner=document.querySelector(".container").outerHTML;
+
+        // textcontent
+        // let inner=document.querySelector(".container").textContent;
+
+        // it will hide the html
+        // let inner=document.querySelector(".container").hidden="true";
+        // console.log(inner);
+
+        // hasAttribute to check exists of attributes
+        // let inner=document.querySelector(".box").hasAttribute("style");
+        // console.log(inner);
+
+        // getAttribute will return attributes value
+        // let inner=document.querySelector(".box").getAttribute("style");
+        // console.log(inner);
+
+
+        // setAttribute wiil set the attribute value
+        // let inner=document.querySelector(".box").setAttribute("style","border:10px solid green");
+        // console.log(inner);
+
+
+        // remove will remove the attribute
+        // let inner=document.querySelector(".box").removeAttribute("style");
+        // console.log(inner);
+
+        // tagName will return tagname of html
+        // let inner=document.querySelector(".box").tagName;
+        // console.log(inner);
+
+        // dataSet will return data value
+        // let inner=document.querySelector(".box").dataset;
+        // console.log(inner);
+
+
+        // insertion of node
+        // let div=document.createElement("div");
+        // div.innerHTML="Hi, I am Prince Kumar";
+        // div.setAttribute("style","border:2px solid green");
+        // append -end
+        // document.querySelector(".container").append(div);
+
+        // prepend-begin
+        // document.querySelector(".container").prepend(div)
+
+        // after -after node
+        // document.querySelector(".container").after(div)
+        
+        // before- before the node
+        // document.querySelector(".container").before(div)
+
+        // insertion in html
+        // let inner=document.querySelector(".container");
+
+        // insert at before of container class
+        // inner.insertAdjacentHTML("beforebegin","<h1>Welcome back</h1>");
+
+        // insertion of text
+        // inner.insertAdjacentText("beforeend","Hi,How are you");
+
+        // remove
+        // let id=document.getElementById("abc");
+        // id.remove();
+
+
+        // classList will return list of value of class(box box1 box2)
+        // let classname=document.querySelector(".box1").classList
+        // console.log(classname)
+
+        // add class
+        // classname.classList.add("green");
+
+
+        // remove
+        // document.querySelector(".box1").classList.remove("green");
+
+        // toggle -it will remove if already exits ,otherwise it will add on
+        document.querySelector(".box1").classList.toggle("green");
+
+        document.querySelector(".box1").classList.toggle("green");
+
+        // className return only value of class
+       let clas= document.querySelector(".box1").className;
+       console.log(clas);
+    </script>
+</body>
+</html>

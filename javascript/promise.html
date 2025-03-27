@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // promise will promise to be execution of the code, it will solve the problem of callback hell.
+
+        console.log("Hello ");
+        // let promise=new Promise((resolve,reject)=>{
+        //     let num=Math.random();
+        //     if(num<0.5){
+        //         reject("No random number was not supporting you 1");
+        //     }
+        //     else{
+        //         setTimeout(()=>{
+        //             console.log("Yes I am done");
+        //             resolve("resolved value");
+        //         })
+        //     }
+        // })
+
+        // promise.then((a)=>{
+        //     console.log(a);
+        // }).catch(err=>{
+        //     console.log(err);
+        // });
+
+        let p1=new Promise((resolve,reject)=>{
+            let num=Math.random();
+            if(num<0.5){
+                reject("No random number was not supporting you 1");
+            }
+            else{
+                setTimeout(()=>{
+                    console.log("Yes I am done");
+                    resolve("resolved value");
+                },0)
+            }
+        })
+
+        let p2=new Promise((resolve,reject)=>{
+            let num=Math.random();
+            if(num<0.5){
+                reject("No random number was not supporting you 2");
+            }
+            else{
+                setTimeout(()=>{
+                    console.log("Yes I am done  2");
+                    resolve("resolved value 2");
+                },0)
+            }
+        })
+
+        // Promise.all() will waits for resolve and return array of values. otherwise it will return error.
+        // let p3=Promise.all([p1,p2]);
+        // p3.then((a)=>{
+        //     console.log(a);
+        // }).catch(err=>{
+        //     console.log(err);
+        // });
+
+        // let p3=Promise.allSettled([p1,p2]);
+        // p3.then((a)=>{
+        //     console.log(a);
+        // }).catch(err=>{
+        //     console.log(err);
+        // });
+
+        // Promise.race() will return first resolve value.
+        // let p3=Promise.race([p1,p2]);
+        // p3.then((a)=>{
+        //     console.log(a);
+        // }).catch(err=>{
+        //     console.log(err);
+        // });
+
+        // Promise.any() will waits for first promise to fullfill otherwise it will give error
+        let p3=Promise.any([p1,p2]);
+        p3.then((a)=>{
+            console.log(a);
+        }).catch(err=>{
+            console.log(err);
+        });
+    </script>
+</body>
+</html>
